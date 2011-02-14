@@ -1,0 +1,42 @@
+Script started on Mon 07 Feb 2011 04:01:35 PM CST
+]0;student@ubuntu: ~/rails_projects/sample_appstudent@ubuntu:~/rails_projects/sample_app$ rails c
+Loading development environment (Rails 3.0.3)
+ruby-1.9.2-p136 :001 > def string_shuffle(s)
+ruby-1.9.2-p136 :002?>   s.split('').shuffle.join
+ruby-1.9.2-p136 :003?>   end
+ => nil 
+ruby-1.9.2-p136 :004 > string_shuffle("Test Example")
+ => "atlTmxpE see" 
+ruby-1.9.2-p136 :005 > class String
+ruby-1.9.2-p136 :006?>   def shuffle
+ruby-1.9.2-p136 :007?>     self.split('').shuffle.join
+ruby-1.9.2-p136 :008?>     end
+ruby-1.9.2-p136 :009?>   end
+ => nil 
+ruby-1.9.2-p136 :010 > "Test Example".shuffle
+ => "xsle aTmeptE" 
+ruby-1.9.2-p136 :011 > person1 = { :first => "Homer", :last +[K=> "Simpsom[Kn" }
+ => {:first=>"Homer", :last=>"Simpson"} 
+ruby-1.9.2-p136 :012 > person1 = { :first => "Homer", :last => "Simpson" }[1P[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@M[1@a[1@r[1@g[1@e
+ => {:first=>"Marge", :last=>"Simpson"} 
+ruby-1.9.2-p136 :013 > person2 = { :first => "Marge", :last => "Simpson" }[1P[1@3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@B[1@a[1@r[1@t
+ => {:first=>"Bart", :last=>"Simpson"} 
+ruby-1.9.2-p136 :014 > params = {}
+ => {} 
+ruby-1.9.2-p136 :015 > params[:father] = person1
+ => {:first=>"Homer", :last=>"Simpson"} 
+ruby-1.9.2-p136 :016 > params[:father] = person1[1P[1P[1@m[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K2
+ => {:first=>"Marge", :last=>"Simpson"} 
+ruby-1.9.2-p136 :017 > params[:mother] = person2[K3[1P[1P[1P[1P[1P[1P[1@c[1@h[1@i[1@l[1@d
+ => {:first=>"Bart", :last=>"Simpson"} 
+ruby-1.9.2-p136 :018 > params[:child] = person3[K[K[K[K[K[K[K[K[K[K[first]:first][C[C[C[C[C[C
+ => "Bart" 
+ruby-1.9.2-p136 :019 > params[:child][:first][1P][:first][1P][:first][1P][:first][1P][:first][1P][:first]M][:first]o][:first]t][:first]h][:first]e][:first]r][:first][1Pother][:first]mother][:first]
+ => "Marge" 
+ruby-1.9.2-p136 :020 > params[:mother][:first][1Pst][1Pst][1Pst]lst]ast][1P][:last][1P][:last][1P][:last][1P][:last][1P][:last][1P][:last]f][:last]a][:last]t][:last]h][:last]e][:last]r][:last]
+ => "Simpson" 
+ruby-1.9.2-p136 :021 > exit
+]0;student@ubuntu: ~/rails_projects/sample_appstudent@ubuntu:~/rails_projects/sample_app$ exit
+exit
+
+Script done on Mon 07 Feb 2011 04:07:38 PM CST
