@@ -95,6 +95,10 @@ describe User do
 
     describe "has_password? method" do
 
+      it "should exist" do
+        @user.should respond_to(:has_password?)
+      end
+
       it "should be true if the passwords match" do
         @user.has_password?(@attr[:password]).should be_true
       end    
