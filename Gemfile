@@ -20,9 +20,9 @@ group :test do
   gem 'factory_girl_rails', '1.0'
 end
 
-group :development, :test do
-  gem 'ruby-debug19'
-end
+#group :development, :test do
+#  gem 'ruby-debug19'
+#end
 
 # Use unicorn as the web server
 # gem 'unicorn'
