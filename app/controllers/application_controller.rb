@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
-    def show
+  protect_from_forgery
+  include SessionsHelper
+
+  def show
     @user = User.find(params[:id])
   end
 
