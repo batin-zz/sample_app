@@ -332,6 +332,12 @@ describe "GET 'index'" do
         end.should change(User, :count).by(-1)
       end
 
+      it "should not destroy the admin" do 
+        lambda do
+          delete :destroy, :id => @admin
+        end.should change(User, :count).by(0)
+      end
+
       it "should redirect to the users page" do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
