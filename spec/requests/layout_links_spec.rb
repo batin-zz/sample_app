@@ -52,7 +52,7 @@ describe "LayoutLinks" do
 
     before(:each) do
       @user = Factory(:user)
-      integration_sign_in(user)
+      integration_sign_in(@user)
     end
 
     it "should have a signout link" do
@@ -67,7 +67,17 @@ describe "LayoutLinks" do
                                          :content => "Profile")
     end
 
-  end
+    it "should not have a delete link" do
+      visit users_path
+      response.should_not have_selector("a", :content => "delete")
+    end
 
+    it "should have a delete link when admin" do
+      @admin = Factory(:user, :email => "admin@example.com", :admin => true)
+      integration_sign_in(@admin)
+      visit users_path
+      response.should have_selector("a", :content => "delete")
+    end
+  end
 end
 
