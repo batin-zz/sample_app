@@ -91,6 +91,7 @@ describe MicropostsController do
       it "should destroy the micropost" do
         lambda do 
           delete :destroy, :id => @micropost
+          response.should redirect_to(root_path)
         end.should change(Micropost, :count).by(-1)
       end
     end
