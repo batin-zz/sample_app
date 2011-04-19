@@ -7,6 +7,7 @@
     <span class="microposts">
       <%= pluralize(current_user.microposts.count, "micropost") %>
     </span>
+  <%= render 'shared/stats' %>
   </a>
 </div>
 
