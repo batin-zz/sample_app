@@ -42,6 +42,29 @@ describe PagesController do
         response.should have_selector("a", :href => followers_user_path(@user),
                                            :content => "1 follower")
       end
+
+      it "should have the right micropost count" do
+        get :home
+        response.should have_selector("span", :content => "0 microposts")
+      end
+
+      it "should have the user URL" do
+        get :home
+        response.should have_selector("a", :href => user_path(@user))
+      end
+
+
+    end
+
+    it "should be successful" do
+      get 'home'
+      response.should be_success
+    end
+
+    it "should have the right title" do
+      get 'home'
+      response.should have_selector("title",
+                                    :content => @base_title + " | Home")
     end
   end
 
